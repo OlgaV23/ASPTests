@@ -1,0 +1,37 @@
+﻿@page "/test1"
+
+
+<h3>TEST1</h3>
+@*
+    Tests "Create from usage"
+*@
+
+
+@*
+    Should be possible to create the following from the usage:
+    Create method
+    Create property
+    Create get-only property
+    Create constant
+    Create other -> Create local variable
+    Create other -> Create field
+*@
+<div @onclick="SomeUsage"></div>
+
+
+@*
+    Should be possible to create the following from SomeType usage:
+    Create type
+*@
+<TypeComponent TItem="SomeType"></TypeComponent>
+
+
+@*
+    Should be possible to create the following from SomeParam usage:
+    Create property
+    Create get-only property
+    Create constant
+    Create other -> Create local variable
+    Create other -> Create field
+*@
+<Component SomeParam="SomeParam"></Component>
