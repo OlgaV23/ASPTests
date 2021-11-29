@@ -1,0 +1,20 @@
+﻿@page "/importreferences"
+
+@*
+    Tests "Create from usage"
+*@
+
+
+@*
+    Should show Import missing references suggestions
+    After import should add 2 usings
+*@ 
+
+@code {
+    SqlByte TestItem = SqlByte.MaxValue;
+}
+
+@functions
+{
+    XName TestItem2 = XName.Get("");
+}

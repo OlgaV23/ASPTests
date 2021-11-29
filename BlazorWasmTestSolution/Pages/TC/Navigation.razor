@@ -1,0 +1,26 @@
+﻿@page "/test2"
+@*
+    Tests "Create from usage"
+*@
+
+
+@*
+    Should be possible to navigate into Component class
+    Should be possible to navigate into SomeParam attribute
+    Should be possible to navigate into SomeParam attribute value
+*@
+<Component SomeParam="SomeParam"></Component>
+
+
+@*
+    Should be possible to navigate into TypeComponent class
+    Should be possible to navigate into SomeParam attribute
+*@
+<TypeComponent TItem="SomeClass"></TypeComponent>
+
+@code {
+    public class SomeClass { }
+
+    public int SomeParam { get; set; }
+
+}
