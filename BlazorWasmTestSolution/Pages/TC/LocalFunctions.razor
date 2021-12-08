@@ -1,21 +1,14 @@
-﻿@page "/localfunctions"
-@*
-    Test code for https://youtrack.jetbrains.com/issue/RSRP-466905
-*@
+﻿@* Tests https://youtrack.jetbrains.com/issue/RSRP-466905 *@
 
 
-@*
-    1 - red code if html code is after local function
-*@
+@* Red code if html code is after local function *@
 @{
     void SomeLocalFunction() { }
 
     <text></text>
 }
 
-@*
-    2 - red code if html code is inside body of the local function
-*@
+@* Red code if html code is inside body of the local function*@
 @{
     void TestTemplate()
     {

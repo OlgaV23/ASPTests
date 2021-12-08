@@ -5,7 +5,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BlazorWasmTestSolution
@@ -21,14 +20,6 @@ namespace BlazorWasmTestSolution
 
             builder.Services.AddOidcAuthentication(options =>
             {
-                // Configure your authentication provider options here.
-                // For more information, see https://aka.ms/blazor-standalone-auth
-
-                /*
-
-                    Should be possible to navigate into TypeComponent class
-    Should be possible to navigate into SomeParam attribute
-                 */
                 builder.Configuration.Bind("Local", options.ProviderOptions);
             });
 

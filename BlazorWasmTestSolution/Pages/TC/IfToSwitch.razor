@@ -1,0 +1,76 @@
+﻿@* Tests for https://youtrack.jetbrains.com/issue/RSRP-482480 *@
+@* Call "Convert to switch statement" quick action on every if *@
+
+@* Prerequisitions *@
+@code
+{
+    static readonly Random rnd = new();
+    readonly int test = rnd.Next();
+    bool someBool = rnd.NextDouble() >= 0.5;
+}
+
+@*  *@
+@if (test == 1)
+{
+    <div></div>
+}
+else if (test == 2)
+{
+    <table></table>
+}
+else if (test == 3)
+{
+    <EditForm></EditForm>
+}
+else if (test == 4)
+{
+    <Component></Component>
+}
+
+
+
+@*  *@
+@code{
+    public void Foo(int myValue)
+    {
+        if (test == 1)
+        {
+            Console.ReadLine();
+        }
+        else if (test == 2)
+        {
+            Console.Write('s');
+        }
+        else
+        {
+            Console.WriteLine();
+        }
+    }
+}
+
+
+@*  *@
+@{
+    void Foo()
+    {
+        switch (someBool)
+        {
+            case true:
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+
+@* Call convert to switch *@
+@functions{
+    void Action()
+    {
+        @if (true)
+        {
+            <div></div>
+        }
+    }
+}
