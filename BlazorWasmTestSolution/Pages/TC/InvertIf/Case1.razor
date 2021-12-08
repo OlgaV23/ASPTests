@@ -1,0 +1,48 @@
+﻿@* Tests for https://youtrack.jetbrains.com/issue/RSRP-482386 *@
+@* Call "Invert if" quick action on every if*@
+
+@*without if*@
+@if (_test == 1)
+{
+    <EditForm></EditForm>
+}
+
+
+@*with if*@
+@if (_test == 1)
+{
+    <EditForm></EditForm>
+}
+else
+{
+    <table></table>
+}
+
+
+@*when the condition is always true*@
+@*and html tag is inside*@
+@if (true)
+{
+    <table></table>
+
+}
+
+@*when the condition is always true*@
+@*and asp net core component is inside*@
+@if (true)
+{
+    <EditForm></EditForm>
+}
+
+@*when the condition is always true*@
+@*and own custom component is inside*@
+@if (true)
+{
+    <Component></Component>
+}
+
+@code
+{
+    static readonly Random Rnd = new();
+    readonly int _test = Rnd.Next();
+}
