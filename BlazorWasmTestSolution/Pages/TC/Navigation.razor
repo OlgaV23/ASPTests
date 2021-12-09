@@ -1,7 +1,18 @@
-﻿@page "/navigation"
+﻿@* Tests for navigation *@
+
+@* Prerequisitions *@
+@code {
+    public class SomeClass { }
+
+    public int SomeParam { get; set; }
+
+    public Component qwe;
+}
+
 @*
-    Tests "Create from usage"
+    Should be possible to navigate into EditForm class in external package
 *@
+<EditForm></EditForm>
 
 
 @*
@@ -18,9 +29,3 @@
 *@
 <TypeComponent TItem="SomeClass"></TypeComponent>
 
-@code {
-    public class SomeClass { }
-
-    public int SomeParam { get; set; }
-
-}
