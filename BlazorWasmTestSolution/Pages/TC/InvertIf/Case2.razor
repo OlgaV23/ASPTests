@@ -1,0 +1,33 @@
+﻿@* Test for https://youtrack.jetbrains.com/issue/RSRP-482386 *@
+@*
+    Call Invert if on the first if
+    Should not absorb code or functions section
+*@
+
+
+@if (false)
+{
+    <Component></Component>
+}
+
+@if (test1 > 3)
+{
+    <EditForm></EditForm>
+}
+
+@if (test > 3)
+{
+    <EditForm></EditForm>
+}
+
+@code
+{
+    static readonly Random rnd = new();
+    readonly int test = rnd.Next();
+}
+
+@functions
+{
+    static readonly Random rnd1 = new();
+    readonly int test1 = rnd1.Next();
+}
